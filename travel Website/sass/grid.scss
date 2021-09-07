@@ -1,0 +1,37 @@
+.row {
+    max-width: $row_width;
+    margin: 0 auto;
+    &::after {
+        @include clearfix;
+    }
+    @include col_setting;
+    @include cols;
+}
+
+.row_no-gutter {
+    max-width: $row_width;
+    margin: 0 auto;
+    @include no_gutter;
+    &::after {
+        @include clearfix;
+    }
+    @include cols_nogutter;
+}
+
+.row_fluid {
+    width: 100%;
+    &::after {
+        @include clearfix;
+    }
+    @include col_setting;
+    @include cols;
+}
+
+.row_fluid_no-gutter {
+    width: 100%;
+    @include no_gutter;
+    &::after {
+        @include clearfix;
+    }
+    @include cols_nogutter;
+}
